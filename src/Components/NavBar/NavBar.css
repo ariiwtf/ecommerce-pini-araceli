@@ -1,0 +1,29 @@
+.buttonContained button{
+    margin: 20px;
+    background-color: transparent;
+    color: rgb(255, 255, 255); 
+    font-weight: bolder;
+    font-size: 15px;
+    
+}
+
+.barContained{
+    justify-content: center;
+}
+
+img{
+    width: 150px;
+}
+
+.barContained{
+    background-color: black
+}
+
+link{
+    text-decoration: none;
+}
+
+
+
+
+

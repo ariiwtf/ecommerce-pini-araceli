@@ -1,0 +1,43 @@
+.cardContainer{
+    border: solid;
+    border-color: grey;
+    border-width: 1px;
+    width: 280px;
+    margin: 10px;
+    /* padding: 10px; */
+    border-radius: 5px;
+
+}
+
+.section_cards{
+    display: flex;
+}
+
+span{
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.imagen{
+    width: 100%;
+}
+
+.dataCard h3{
+
+        /* margin: 25px; */
+}
+
+.dataCard{
+    /* display: flex; */
+}
+
+.gridCards{
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.title_cardList{
+    
+    color: blueviolet; 
+   
+}

@@ -1,0 +1,28 @@
+#addToCart{
+    background-color: blueviolet;
+    color: aliceblue;
+    width: 100%;
+    
+}
+
+.stock_card{
+    margin: 0px;
+    
+}
+
+.btn-cart{
+    
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    color: blueviolet;
+    margin: 10px;
+    padding: 10px;
+}
+
+.count{
+    font-weight: normal;
+}
+
+
