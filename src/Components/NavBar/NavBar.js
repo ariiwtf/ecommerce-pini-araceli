@@ -64,7 +64,7 @@ const NavBar = () => {
                 {/* 
                 <Button style={{backgroundColor:'red' , color:'black'}}>Nosotrxs</Button> */}
             </div>
-            <Button id='cart_button'><ShoppingCart/></Button>
+            <Button id='cart_button'> <Link to="/cart" style={{textDecoration: 'none', color:'white'}}> <ShoppingCart/> </Link></Button>
 
         </Toolbar>
       </AppBar>

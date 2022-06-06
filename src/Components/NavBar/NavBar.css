@@ -4,11 +4,22 @@
     color: rgb(255, 255, 255); 
     font-weight: bolder;
     font-size: 15px;
-    
 }
 
 .barContained{
     justify-content: center;
+}
+
+.buttonContained Button{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+.buttonContained Button:hover, .buttonContained Button:focus {
+    background-size: 100% 1px;
 }
 
 img{

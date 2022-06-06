@@ -3,19 +3,22 @@ import { useState } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './itemCount.css'
 
-const ItemCount = () => {
+const ItemCount = ({ mostrarCantidad}) => {
 
     const [count, setCount] = useState(1)
     const [stock, setStock] = useState (7)
 
+
     const addCount = () => {
         setCount(count +1)
         setStock(stock -1)
+        mostrarCantidad(count +1)
     }
 
     const removeCount = () => {
         setCount(count-1)
         setStock(stock+1)
+        mostrarCantidad(count -1)
     }
 
     const onAdd = () => {
@@ -37,7 +40,6 @@ const ItemCount = () => {
             <hr></hr>
         {/* </div> */}
 
-        
             <Button onClick={onAdd} id='addToCart' variant="contained"> <ShoppingCartIcon></ShoppingCartIcon> Añadir al carrito</Button>
             </div>
         </>

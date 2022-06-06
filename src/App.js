@@ -7,6 +7,7 @@ import Nosotrxs from './pages/Nosotrxs';
 import NotFound from './pages/NotFound';
 import DetalleProducto from './pages/detalleProducto';
 import CategoryContainer from './Components/category/categoryContainer';
+import Cart from './pages/cart';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/santuario' element={ <Santuario />}></Route>
         <Route path='/nosotrxs' element={ <Nosotrxs />}></Route>
         <Route path='*' element={ <NotFound />}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
         
       </Routes>
 

@@ -1,9 +1,21 @@
 import ItemCount from "../ItemCount/itemCount"
 import './itemDetail.css'
+import { Button } from "@mui/material"
+import { useState } from "react"
+import {Link} from 'react-router-dom';
+
+
 
 
 const ItemDetail = ({atributo}) => {
-    console.log("Atributo: " + atributo)
+    const [cantidad, setCantidad] = useState(1)
+
+    const irAPagar = () => {
+        console.log("Productos a pagar: ", atributo.title)
+        console.log("Precio: ", atributo.price)
+        console.log("Cantidad: ", cantidad)
+    }
+
     return (
         <>
             <hr></hr>
@@ -20,8 +32,12 @@ const ItemDetail = ({atributo}) => {
                     </div>
                     <div className="itemCount_detail">
                         {/* llamada al contador */}
-                        <ItemCount></ItemCount>
+                        <ItemCount mostrarCantidad = {setCantidad}></ItemCount>
                     </div>
+
+                    {/* Creamos un nuevo botón que recibirá la info del child itemCount */}
+                    <Button variant="contained" onClick={irAPagar}>
+                    <Link to='/cart' style={{textDecoration: 'none', color:'white'}}> Ir a pagar </Link></Button>
                 </div>
             </section>
             
