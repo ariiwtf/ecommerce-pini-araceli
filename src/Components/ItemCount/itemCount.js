@@ -3,11 +3,10 @@ import { useState } from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './itemCount.css'
 
-const ItemCount = ({ mostrarCantidad}) => {
+const ItemCount = ({ mostrarCantidad , setShowButton}) => {
 
     const [count, setCount] = useState(1)
     const [stock, setStock] = useState (7)
-
 
     const addCount = () => {
         setCount(count +1)
@@ -22,7 +21,8 @@ const ItemCount = ({ mostrarCantidad}) => {
     }
 
     const onAdd = () => {
-        alert("Añadiste al carrito " +(count)+ " remeras")
+        setShowButton(true)
+        console.log("Añadiste al carrito " +(count)+ " remeras")
     }
 
 
@@ -38,7 +38,7 @@ const ItemCount = ({ mostrarCantidad}) => {
             {/*seteamos el stock -1 porque contamos la remera a añadir por default*/}
             <p className='stock_card'>Stock: {stock -1}</p>
             <hr></hr>
-        {/* </div> */}
+        
 
             <Button onClick={onAdd} id='addToCart' variant="contained"> <ShoppingCartIcon></ShoppingCartIcon> Añadir al carrito</Button>
             </div>

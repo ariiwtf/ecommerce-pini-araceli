@@ -10,6 +10,9 @@ import {Link} from 'react-router-dom';
 const ItemDetail = ({atributo}) => {
     const [cantidad, setCantidad] = useState(1)
 
+    //Estado para mostrar botón de terminar compra
+    const [showButton, setShowButton] = useState(false)
+
     const irAPagar = () => {
         console.log("Productos a pagar: ", atributo.title)
         console.log("Precio: ", atributo.price)
@@ -30,14 +33,23 @@ const ItemDetail = ({atributo}) => {
                         <p className="info_detail">Con la compra de cada prenda, ayudas a los animales no humanos que viven en Santuario Salvajes. El porcentaje de donación es el 20% de cada prenda. <br></br> Muchas gracias por colaborar!</p>
                         <p className="price_detail">{atributo.price}</p>
                     </div>
-                    <div className="itemCount_detail">
+                    <div className="itemCount_detail"></div>
                         {/* llamada al contador */}
-                        <ItemCount mostrarCantidad = {setCantidad}></ItemCount>
-                    </div>
-
-                    {/* Creamos un nuevo botón que recibirá la info del child itemCount */}
-                    <Button variant="contained" onClick={irAPagar}>
-                    <Link to='/cart' style={{textDecoration: 'none', color:'white'}}> Ir a pagar </Link></Button>
+                    {
+                        showButton == false ?
+                        <ItemCount
+                        mostrarCantidad = {setCantidad}
+                        setShowButton={setShowButton}
+                        /> 
+                        :
+                    
+                    
+                        <Button variant="contained" onClick={irAPagar}>
+                            <Link to='/cart' style={{textDecoration: 'none', color:'white' }}>
+                                Ir a pagar
+                            </Link>
+                        </Button>
+                    }
                 </div>
             </section>
             
