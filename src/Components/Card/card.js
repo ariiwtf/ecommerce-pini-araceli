@@ -2,11 +2,8 @@ import './card.css'
 import ItemCount from '../ItemCount/itemCount'
 import { Button  } from '@mui/material'
 import { Link } from 'react-router-dom'
-import { hover } from '@testing-library/user-event/dist/hover'
 
 const Card = ({image, title, price, id}) => {
-
-   
     
 
     return (

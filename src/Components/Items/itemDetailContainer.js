@@ -6,8 +6,6 @@ import './itemDetail.css'
 
 
 const ItemDetailContainer = () => {
-
-    console.log(useParams())
     const {id} = useParams()
     const [prod , setProd] = useState({})
 
@@ -28,7 +26,6 @@ const ItemDetailContainer = () => {
                 const findProductId = res.find((prod) => {
                     return prod.id == id
                 })
-                console.log ("ItemDetailContainer: ",res)
                 setProd(findProductId);
             })
     }, [])

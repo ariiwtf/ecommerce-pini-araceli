@@ -22,7 +22,8 @@ const ItemDetail = ({atributo}) => {
     return (
         <>
             <hr></hr>
-            <section className="section_detail">
+            
+             <section className="section_detail">
                 
                 <div className="image_detail">
                     <img src={`/${atributo.image}`} />
