@@ -41,6 +41,7 @@ const ItemDetail = ({atributo}) => {
                         <ItemCount
                         mostrarCantidad = {setCantidad}
                         setShowButton={setShowButton}
+                        infoProducto={atributo}
                         /> 
                         :
                     

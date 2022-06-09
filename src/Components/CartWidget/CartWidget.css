@@ -4,3 +4,37 @@
     
 }
 
+.containerItemProduct{
+    color: rgb(101, 98, 98);
+    width: 320px;
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+}
+.titleItem{
+    text-align: center;
+}
+.eachItem{
+    display: flex;
+    align-items: center;
+}
+
+.eachItem span{
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+}
+
+.eachItem img{
+    width: 100px;
+    margin-left: 5px;
+    box-shadow: 5px 5px 10px 1px rgba(128, 128, 128, 0.285);
+}
+
+.btnDelete {
+    height: 100%;
+    color: blueviolet;
+}

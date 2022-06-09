@@ -4,6 +4,7 @@ import { Button  } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 const Card = ({image, title, price, id}) => {
+    const atributo ={image, title, price, id}
     
 
     return (
@@ -21,7 +22,7 @@ const Card = ({image, title, price, id}) => {
                 Ver detalle
                 </Link>
                 </Button>
-            <ItemCount></ItemCount>
+            <ItemCount infoProducto={atributo}></ItemCount>
         </div>
     )
 }

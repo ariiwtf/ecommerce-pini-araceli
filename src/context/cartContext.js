@@ -7,7 +7,12 @@ const CartProvider = ({children}) => {
     const [cartListItems , setCartListItems] = useState([])
     const addProductToCart = (product) => {
         console.log("producto agregado: ", product)
-        setCartListItems([product])
+        let isInCart = cartListItems.find( cartItem => cartItem.id === product.id )
+        
+        if (!isInCart){
+            return setCartListItems( cartListItems => [...cartListItems,product])
+        }
+
     }
     const data = {
         cartListItems,

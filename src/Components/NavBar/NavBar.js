@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import ShoppingCart from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -26,7 +25,7 @@ const NavBar = () => {
 
     return(
         <>
-        <AppBar position="static">
+        <AppBar position="sticky">
         <Toolbar className='barContained'>
             <Link to='/'><img src='/LOGOfam.jpg'></img></Link>
             <div className='buttonContained'>
@@ -61,10 +60,9 @@ const NavBar = () => {
 
                 <Button ><Link to='/santuario' style={{textDecoration: 'none', color:'white'}}>Santuario Salvajes</Link></Button>
                 <Button><Link to='/nosotrxs' style={{textDecoration: 'none', color:'white'}}>Nosotrxs</Link></Button>
-                {/* 
-                <Button style={{backgroundColor:'red' , color:'black'}}>Nosotrxs</Button> */}
+                
             </div>
-            <Button id='cart_button'> <Link to="/cart" style={{textDecoration: 'none', color:'white'}}> <ShoppingCart/> </Link></Button>
+            <Button id='cart_button'><ShoppingCart/></Button>
 
         </Toolbar>
       </AppBar>
