@@ -8,10 +8,7 @@ import NotFound from './pages/NotFound';
 import DetalleProducto from './pages/detalleProducto';
 import CategoryContainer from './Components/category/categoryContainer';
 import Cart from './pages/cart';
-import { CartProvider } from './context/cartContext';
-
-
-
+import  {CartProvider}  from './context/cartContext';
 
 
 function App() {

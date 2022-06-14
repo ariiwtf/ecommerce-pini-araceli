@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 import './CartWidget.css'
 
 const ShoppingCart = () => {
-
     const {cartListItems} = useContext(CartContext)
+    const {removeItem} = useContext(CartContext)
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -21,7 +21,6 @@ const ShoppingCart = () => {
     setAnchorEl(null);
     };
 
-
     return(<>
                 
                 
@@ -31,12 +30,12 @@ const ShoppingCart = () => {
                 aria-controls={open ? 'basic-menu' : undefined}
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-            >   <Link to='/cart'>
+                onClick={handleClick}>
+                {/* <Link to='/cart'> */}
                 <p className='cart_button'>
                     <ShoppingCartIcon/>
                 </p>
-                </Link>
+                {/* </Link> */}
             </Button>
             <Menu
                 id="basic-menu"
@@ -62,7 +61,7 @@ const ShoppingCart = () => {
                                         <p>Cant:</p>
 
                                         <div className='btnDelete'>
-                                        <DeleteIcon />
+                                        <DeleteIcon onClick={() => {removeItem(item.id)}}/>
                                     </div>
                                     </div>
                                     

@@ -10,10 +10,12 @@ const ItemCount = ({ mostrarCantidad , setShowButton , infoProducto}) => {
     const [count, setCount] = useState(1)
     const [stock, setStock] = useState (7)
 
+
+
     const addCount = () => {
         setCount(count +1)
         setStock(stock -1)
-        // mostrarCantidad(count +1)
+        mostrarCantidad(count +1)
     }
 
     const removeCount = () => {
@@ -40,7 +42,6 @@ const ItemCount = ({ mostrarCantidad , setShowButton , infoProducto}) => {
             {/*seteamos el stock -1 porque contamos la remera a añadir por default*/}
             <p className='stock_card'>Stock: {stock -1}</p>
             <hr></hr>
-        
 
             <Button onClick={() => addProductToCart(infoProducto)} id='addToCart' variant="contained">
                 <ShoppingCartIcon/> Añadir al carrito

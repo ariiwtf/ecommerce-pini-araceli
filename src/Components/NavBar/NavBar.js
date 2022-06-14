@@ -7,10 +7,12 @@ import ShoppingCart from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import CartContext from '../../context/cartContext';
 
 
 
 const NavBar = () => {
+    const {clearCart} = React.useContext(CartContext)
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -62,6 +64,7 @@ const NavBar = () => {
                 <Button><Link to='/nosotrxs' style={{textDecoration: 'none', color:'white'}}>Nosotrxs</Link></Button>
                 
             </div>
+            <Button onClick={clearCart} id='clear_cart' style={{textDecoration: 'none', color:'white'}}>Borrar carrito</Button>
             <Button id='cart_button'><ShoppingCart/></Button>
 
         </Toolbar>
