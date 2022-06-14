@@ -58,7 +58,6 @@ const ShoppingCart = () => {
                                     <div className='titleItem'>
                                         <h3>{item.title}</h3>
                                         <p>{item.price}</p>
-                                        <p>Cant:</p>
 
                                         <div className='btnDelete'>
                                         <DeleteIcon onClick={() => {removeItem(item.id)}}/>

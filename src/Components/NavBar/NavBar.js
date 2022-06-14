@@ -8,11 +8,14 @@ import { Link } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import CartContext from '../../context/cartContext';
-
+import { useContext } from 'react';
 
 
 const NavBar = () => {
     const {clearCart} = React.useContext(CartContext)
+    const {cantItems} = useContext(CartContext)
+
+    const mostrarCantItems = cantItems()
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -22,7 +25,6 @@ const NavBar = () => {
     const handleClose = () => {
       setAnchorEl(null);
     };
-
 
 
     return(
@@ -66,6 +68,7 @@ const NavBar = () => {
             </div>
             <Button onClick={clearCart} id='clear_cart' style={{textDecoration: 'none', color:'white'}}>Borrar carrito</Button>
             <Button id='cart_button'><ShoppingCart/></Button>
+            <h5 id='cart_button_quantity' style={{textDecoration: 'none', color:'white'}}>Cantidad de productos: {mostrarCantItems}</h5>
 
         </Toolbar>
       </AppBar>

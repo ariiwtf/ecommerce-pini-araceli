@@ -26,12 +26,18 @@ const CartProvider = ({children}) => {
         setCartListItems([])
     }
 
+    const cantItems = () => {
+       return cartListItems.length
+    }
+    
     const data = {
         cartListItems,
         addProductToCart,
         removeItem,
-        clearCart
+        clearCart,
+        cantItems
     }
+
     return (
         <CartContext.Provider value={data}>
             {children}

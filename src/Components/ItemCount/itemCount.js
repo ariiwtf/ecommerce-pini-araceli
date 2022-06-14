@@ -6,22 +6,22 @@ import CartContext from '../../context/cartContext';
 
 const ItemCount = ({ mostrarCantidad , setShowButton , infoProducto}) => {
 
-    const { addProductToCart } = useContext(CartContext)
+    const { addProductToCart , addCount } = useContext(CartContext)
     const [count, setCount] = useState(1)
     const [stock, setStock] = useState (7)
 
 
 
-    const addCount = () => {
-        setCount(count +1)
-        setStock(stock -1)
-        mostrarCantidad(count +1)
-    }
+    // const addCount = () => {
+    //     setCount(count +1)
+    //     setStock(stock -1)
+    //     mostrarCantidad(count +1)
+    // }
 
     const removeCount = () => {
         setCount(count-1)
         setStock(stock+1)
-        // mostrarCantidad(count -1)
+        mostrarCantidad(count -1)
     }
 
     const onAdd = () => {
@@ -37,7 +37,7 @@ const ItemCount = ({ mostrarCantidad , setShowButton , infoProducto}) => {
             <button onClick={removeCount} disabled={count == 0} className='btn-cart'>-</button>
             <span className='count'>{count}</span>
             
-            <button onClick={addCount} disabled = {count == 7} className='btn-cart'>+</button>
+            <button onClick={ () => {addCount()}} disabled = {count == 7} className='btn-cart'>+</button>
 
             {/*seteamos el stock -1 porque contamos la remera a añadir por default*/}
             <p className='stock_card'>Stock: {stock -1}</p>

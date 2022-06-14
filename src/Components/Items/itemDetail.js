@@ -16,7 +16,7 @@ const ItemDetail = ({atributo}) => {
     const irAPagar = () => {
         console.log("Productos a pagar: ", atributo.title)
         console.log("Precio: ", atributo.price)
-        console.log("Cantidad: ", cantidad)
+        // console.log("Cantidad: ", cantidad)
     }
 
     return (
